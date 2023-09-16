@@ -1,15 +1,19 @@
 <template>
     <div class="container">
-        <h1>Home</h1>
+        <h1>Pedidos</h1>
     </div>
 </template>
 
 <script>
 
     export default {
-        name: 'HomeView',
-        components: {
-        }
+        name:"Pedidos"
     }
 
 </script>
+
+<style scoped>
+
+
+
+</style>
