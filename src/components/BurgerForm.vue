@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <p>COMPONENTE DE MENSAGEM</p>
+        <Message :msg="msg" v-show="msg"/>
         <div>
             <form id="burger-form" @submit="cadastrarHamburguer">
 
@@ -46,8 +46,13 @@
 
 <script>
 
+    import Message from './Message.vue';
+
     export default {
         name:"BurgerForm",
+        components:{
+            Message
+        },
         data() {
             return {
                 paes:null,
@@ -68,11 +73,12 @@
             async getIngredientes() {
                 const req = await fetch("http://localhost:3000/ingredientes");
                 const data = await req.json();
-                console.log(data)
+
                 this.paes = data.paes
                 this.carnes = data.carnes
                 this.opcionaisData = data.opcionais
             },
+
             async cadastrarHamburguer(e){
                 e.preventDefault();
                 const data = {
@@ -93,6 +99,11 @@
 
                 const res = await req.json();
                 console.log(res)
+                this.msg = `Pedido Nº${res.id} realizado com sucesso`;
+                setTimeout(() => {
+                    this.msg =""
+                }, 3000); 
+
 
                 this.nome="";
                 this.pao="";
