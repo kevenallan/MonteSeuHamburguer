@@ -19,7 +19,7 @@
             return {
                 //msh - Monte seu Hamburguer
                 logo_msh: "/img/logo.png",
-                alt_msh: "Monte seu Hamburguer"
+                alt_msh: "Mangabeira Burger"
             }
         }
     }

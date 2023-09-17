@@ -1,10 +1,9 @@
 <template>
-    
+
     <div class="banner">
-        <h1>Monte seu Hamburguer</h1>
+        <h1>Mangabeira Burger</h1>
 
     </div>
-        
     
 </template>
 
